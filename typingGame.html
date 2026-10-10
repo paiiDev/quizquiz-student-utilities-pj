@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Game</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .btn-dark {
+        width: 100px;
+      }
+      #score, #letters {
+        font-size: 25px;
+      }
+      body {
+        background-color: #f1fcff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="d-block text-center">
+        <h1 class="py-5">Typing Game ⌨️</h1>
+        <span id="score">Score : 0</span><br /><br />
+        <span id="letters">Letters : _____</span> <br /><br />
+        <span id="indicator" class="text-danger"></span>
+        <input type="text" name="t1" id="t1" class="form-control mt-2" /><input
+          type="button"
+          value="Start Game"
+          class="btn btn-dark my-4 startBtn"
+        />
+        <input
+          type="button"
+          value="Stop Game"
+          class="btn btn-dark my-4 stopBtn"
+        />
+        <div class="time"></div>
+      </div>
+    </div>
+
+    <script>
+      var randomLetters = [
+        "apple",
+        "orange",
+        "grape",
+        "watermelon",
+        "lemon",
+        "mango",
+        "coconut",
+        "blueberry",
+        "cherry",
+        "kiwi",
+        "strawberry",
+        "eggplant",
+        "tomato",
+        "brocoli",
+      ];
+      var randomNum, generated, timer, sec;
+
+      var letters = document.querySelector("#letters");
+      var startBtn = document.querySelector(".startBtn");
+      var stopBtn = document.querySelector(".stopBtn");
+
+      var score = 0;
+
+      function generateLetters() {
+        counter();
+        randomNum = Math.floor(Math.random() * randomLetters.length);
+
+        letters.innerHTML = "Letters : " + randomLetters[randomNum];
+      }
+
+      function counter() {
+            clearInterval(timer);
+
+            sec = 5;
+
+            timer = setInterval(function () {
+
+                document.querySelector(".time").innerHTML = "⏰: " + sec;
+                sec--;
+                if (sec < 0) {
+                    clearInterval(timer);
+                    generateLetters();
+                }
+            }, 1000);
+        }
+
+      function startGame() {
+        generateLetters();
+        document.querySelector("#t1").addEventListener("input", () => {
+          var input = document.querySelector("#t1").value;
+          if (input === randomLetters[randomNum]) {
+            score++;
+            document.querySelector("#score").innerHTML = "Score : " + score;
+
+            document.querySelector("#t1").value = "";
+            generateLetters();
+            document.querySelector("#indicator").innerHTML = "";
+          } else {
+            document.querySelector("#indicator").innerHTML = "⚠️⚠️⚠️";
+          }
+        });
+      }
+      startBtn.addEventListener("click", startGame);
+
+      function stopGame(){
+        alert("Your final score is "+ score);
+        clearInterval(timer);
+         letters.innerHTML = "Letters : ______";
+      }
+
+      stopBtn.addEventListener("click", stopGame);
+    </script>
+  </body>
+</html>

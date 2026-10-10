@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+</head>
+<style>
+    .container {
+        width: 400px;
+        height: 350px;
+        padding: 10px;
+        margin: 0 auto;
+        background-color: rgb(203, 203, 203);
+        color: black;
+        border-radius: 3px;
+    }
+
+    input {
+        width: 25px;
+        height: 30px;
+        margin: 10px;
+    }
+
+    .input-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Btn {
+        width: 200px;
+        height: 35px;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 25px;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    #r1,
+    #r2 {
+        padding: 20px;
+    }
+
+    .timer-container {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <form name="f">
+        <div class="container">
+            <h3 id="s">Score: 0</h3>
+            <div class="input-container">
+                <input type="text" name="t1" id="t1" autocomplete="off"> *
+                <span id="r1">___</span> = <span id="r2">___</span>
+            </div>
+
+            <div class="btn-container">
+                <input type="button" value="Submit" class="Btn" onclick="check()">
+                <input type="button" value="Start Game" class="Btn" onclick="start()">
+                <input type="button" value="Stop Game" class="Btn" onclick="stop()">
+            </div>
+            <div class="timer-container">
+                <span id="timer"></span>
+
+            </div>
+
+        </div>
+    </form>
+
+    <script>
+
+        var rn1 = document.querySelector("#r1");
+        var rn2 = document.querySelector("#r2");
+        var n1, n2, timer, sec, ans, result;
+        var score = 0;
+
+        function start() {
+            generateNum();
+        }
+
+        function stop() {
+            clearInterval(timer);
+            alert("Your final score is " + score);
+        }
+
+        function generateNum() {
+            n1 = Math.floor(Math.random() * 10);
+            n2 = Math.floor(Math.random() * 10);
+            result = n1 * n2;
+            rn1.innerHTML = n1;
+            rn2.innerHTML = result;
+            counter();
+        }
+
+
+        function check() {
+            var input = Number(f.t1.value);
+           ans  = input * n1;
+           console.log(ans);
+            if ( ans  === result) {
+                alert("Your answer is correct! You have got 1 score.")
+                score++;
+                document.querySelector("#s").innerHTML = "Score: " + score;
+                f.t1.value = '';
+                generateNum();
+            } else {
+                alert("Try again! your answer is wrong.");
+                f.t1.value = '';
+            }
+        }
+
+
+        function counter() {
+            clearInterval(timer);
+            sec = 15;
+            timer = setInterval(function () {
+                document.querySelector("#timer").innerHTML = "Timer: " + sec;
+                if(sec <= 5){
+                    document.querySelector(".timer-container").style.color = "red";
+                }
+                else {
+                    document.querySelector(".timer-container").style.color = "black";
+                }
+                 if (sec == 0) {
+                    alert("Game over!") 
+                    generateNum();
+                    f.t1.value = '';
+                }
+                sec--;
+            }, 1000)
+        }
+
+    </script>
+</body>
+
+</html>

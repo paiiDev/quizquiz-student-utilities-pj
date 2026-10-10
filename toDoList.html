@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body{
+    padding: 0;
+    margin: 0;
+    background-color: #CBD7E3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    width: 450px;
+    max-height: 1000px;
+    overflow-y: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+h1{
+    color: #153D83;
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 1px;
+    font-weight: bold;
+}
+
+#taskInput {
+    width: 250px;
+    height: 40px;
+    background-color: #d6d6d6;
+    border: none;
+    border-radius: 2px;
+    color: #153D83;
+}
+.taskInput-container{
+    padding: 20px;
+}
+#addTaskBtn{
+    width: 146px;
+    height: 40px;
+    border: none;
+    background-color: #153D83;
+    color: white;
+    border-radius: 2px;
+}
+h4{
+    text-align: center; 
+    margin-bottom: 0;
+    color: #153D83;
+}
+.deco-line{
+    padding-top: 5px;
+    border-bottom: #153D83 solid 1px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.taskItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E0EBFF;
+    border-radius: 2px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+.delete-btn{
+    width: 70px;
+    height: 40px;
+    background-color: #153D83;
+    border: none;
+    border-radius: 2px;
+    color: white;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.text{
+    padding-left: 6px;
+    font-size: 18px;
+}
+.completed{
+    text-decoration: line-through;
+    color: grey;
+}
+#tl{
+    display: none;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>To-do List</h1>
+        <form name="f">
+            <div class="taskInput-container">
+                <input type="text" name="taskInput" id="taskInput" placeholder="    Add your task here...">
+                <input type="button" value="Add" id="addTaskBtn">
+            </div>
+        </form>
+        <h4 id="tl">Task List</h4>
+        <div class="deco-line"></div>
+        <ul id="taskList"></ul>
+    </div>
+</body>
+
+<script src="toDoList.js"></script>
+</html>

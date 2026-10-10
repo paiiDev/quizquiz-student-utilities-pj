@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Exercise</title>
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      @media (width < 800px) {
+        .next {
+          left: 130px;
+          top: 550px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="d-flex h-100 text-center cbg-img" cz-shortcut-listen="true">
+    <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <nav
+            class="navbar navbar-expand-lg"
+            aria-label="Offcanvas navbar large"
+          >
+            <div class="container-fluid">
+              <a class="navbar-brand text-white" href="exercise.html">
+                <img src="./images/arrow-left-solid.svg" class="cw my-2 mx-2 mx-sm-5">
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar2"
+                aria-controls="offcanvasNavbar2"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon navbar-dark"></span>
+              </button>
+              <div
+                class="offcanvas offcanvas-end text-bg-dark"
+                tabindex="-1"
+                id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label"
+              >
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbar2Label">
+                    Menu
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link text-white"
+                        aria-current="page"
+                        href="./index.html"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="nav-item ps-4">
+                      <div class="acc-logo">
+                        <a class="nav-link text-white acc-info" href="#"></a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!--Main-->
+      <main class="mt-2 pt-2 d-flex justify-content-center  align-items-center flex-column ">
+        <div class="div"></div>
+        <div class="flip-card">
+            <div class="card-inner">
+                <div class="card-front d-flex justify-content-center align-items-center">
+                    <div class="question info d-flex flex-column fs-3 fw-bold p-3">
+                      
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p class="definition fs-5 p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus illum vel voluptate doloribus! Dolorum impedit, neque accusamus libero, ratione, unde numquam cum qui maiores distinctio porro nisi nobis quo quasi?</p>
+                </div>
+            </div>
+        </div>
+ <div class="next text-white m-5">
+          &RightArrow;
+        </div>
+      </main>
+             
+    </div>
+
+    <script src="./flash-card.js"></script>
+  </body>
+</html>

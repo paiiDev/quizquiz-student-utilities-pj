@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who is Lucky?</title>
+</head>
+<style>
+    .container {
+        width: 280px;
+        border: 3px grey solid;
+        background-color: burlywood;
+        color: white;
+        border-radius: 5px;
+        margin: auto;
+        text-align: center;
+        padding: 5px;
+        border: none;
+    }
+
+    #t1 {
+        width: 200px;
+        height: 32px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .addBtn {
+        width: 100px;
+        padding: 8px;
+        margin: 10px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .luckyBtn {
+        padding: 10px;
+        width: 200px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    #ti {
+        display: none;
+    }
+    #winner{
+        text-align: center;
+        color: rgb(255, 166, 49);
+    }
+    #nameList{
+        text-align: justify;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Who is lucky?</h1>
+        <form name="f">
+            Add name <br>
+            <input type="text" name="t1" id="t1">
+            <br>
+            <br><input type="button" value="Add" onclick="addName()" class="addBtn">
+            <br><br>
+            <input type="button" value="Find who is lucky" onclick="lucky()" class="luckyBtn">
+        </form>
+        <h4 id="ti">Name List</h4>
+        <ol id="nameList"></ol>
+    </div>
+    <h1 id="winner"></h1>
+
+
+
+    <script>
+        var t1 = document.getElementById("t1");
+        var list = [];
+
+        function addName() {
+            var name = t1.value;
+
+            if (name !== '') {
+                document.getElementById("ti").style.display = "block";
+
+                
+                list.push(name);
+
+                var ol = document.getElementById("nameList");
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(name));
+                ol.appendChild(li);
+
+                t1.value = '';
+            }
+
+        }
+
+        function lucky() {
+
+            var lucky = Math.floor(Math.random() * list.length);
+            if( list != ''){
+                alert("Winner is " + list[lucky]);
+               document.getElementById("winner").innerHTML = "Winner : " + list[lucky];
+                list = [];
+            }
+           
+        }
+    </script>
+</body>
+
+</html>

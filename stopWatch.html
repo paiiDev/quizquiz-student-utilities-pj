@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body{
+    background-image: url(/images/magic\ forest\ aesthetic\ green\ desktop\ wallpaper.png);
+    background-size: cover;
+    font-family:   'Arial Narrow Bold', sans-serif, sans-serif;
+    background-repeat: no-repeat;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    position: relative;
+}
+.stopwatch{
+    font-size: 100px;
+    color: white;
+}
+
+.btn{
+    width: 80px;
+    background-color: #8FA2C0;
+    color: white;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.ms{
+    font-size: 15px;
+    position: absolute;
+    left: 650px;
+    top: 120px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="stopwatch">00:00:00
+        </div>
+        <div class="btn-container">
+            <div class="btn startBtn btn-secondary">Start</div>
+            <div class="btn pauseBtn btn-secondary">Pause</div>
+            <div class="btn continueBtn btn-secondary ">Continue</div>
+            <div class="btn stopBtn btn-secondary">Stop</div>
+        </div>
+       
+    </div>
+ 
+    
+
+
+
+    <script src="stopWatch.js"></script>
+</body>
+</html>

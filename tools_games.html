@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tools & Game</title>
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body class="d-flex h-100 text-center cbg-themed" cz-shortcut-listen="true">
+    <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <nav
+            class="navbar navbar-expand-lg"
+            aria-label="Offcanvas navbar large"
+          >
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"> </a>
+
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar2"
+                aria-controls="offcanvasNavbar2"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon navbar-dark"></span>
+              </button>
+              <div
+                class="offcanvas offcanvas-end text-bg-dark"
+                tabindex="-1"
+                id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label"
+              >
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbar2Label">
+                    Menu
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link text-white"
+                        aria-current="page"
+                        href="./index.html"
+                        >Home</a
+                      >
+                    </li>
+                    <li
+                      class="nav-item d-flex justify-content-center align-items-center mx-3"
+                    >
+                      <a
+                        href="practice.html"
+                        class="nav-link text-white"
+                        aria-current="page"
+                      >
+                        Practice
+                      </a>
+                    </li>
+                    <li class="nav-item ps-4">
+                      <div class="acc-logo">
+                        <a class="nav-link text-white acc-info" href="#"></a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main class="px-3 my-5">
+        <div class="container d-flex justify-content-center flex-column">
+          <h3 class="text-white">Games</h3>
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row justify-content-center">
+                  <div class="card mx-2 p-0 typing-game" style="width: 16rem">
+                    <img
+                      src="./images/typing-game.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-white">Typing Game</p>
+                    </div>
+                  </div>
+                  <div class="card mx-2 p-0 simon-game
+                  " style="width: 16rem">
+                    <img
+                      src="./images/simon-game.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-white">Simon Game</p>
+                    </div>
+                  </div>
+                  <div class="card mx-2 p-0 math-game-1" style="width: 16rem">
+                    <img
+                      src="./images/math-game.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-white">Math Game - 1</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row justify-content-center"></div>
+                <div class="row justify-content-center">
+                  <div class="card mx-2 p-0 guess-the-number" style="width: 16rem">
+                    <img
+                      src="./images/math-game2.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-white">Guess the number</p>
+                    </div>
+                  </div>
+
+                  <div class="card mx-2 p-0 dice-game" style="width: 16rem">
+                    <img
+                      src="./images/dice-game.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-white">Dicee Game</p>
+                    </div>
+                  </div>
+                  <div class="card mx-2 p-0 drums-kit-game" style="width: 16rem">
+                    <img
+                      src="./images/drums-game.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-white">Drums Kit Game</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev me-5 pe-5"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+           <h3 class="text-white mt-5">Tools</h3>
+          <div id="carouselExampleIndicators2" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row justify-content-center">
+                  <div class="card mx-2 p-0 toDoList" style="width: 16rem">
+                    <img
+                      src="./images/to-do list.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-white">To-do List</p>
+                    </div>
+                  </div>
+                     <div class="card mx-2 p-0 stopWatch" style="width: 16rem">
+                    <img
+                      src="./images/stopwatch.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-white">Stopwatch</p>
+                    </div>
+                  </div>
+                  <div class="card mx-2 p-0 calculator" style="width: 16rem">
+                    <img
+                      src="./images/calculator.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-white">Calculator</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row justify-content-center"></div>
+                <div class="row justify-content-center">
+               
+                   <div class="card mx-2 p-0 whoIsLucky" style="width: 16rem">
+                    <img
+                      src="./images/bg-features2.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-white">Find who is lucky?</p>
+                    </div>
+                  </div>
+                  <div class="card mx-2 p-0 palindrome" style="width: 16rem">
+                    <img
+                      src="./images/palindrome.png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-white">Palindrome</p>
+                    </div>
+                  </div>
+                  <div class="card mx-2 p-0 wordCounter" style="width: 16rem">
+                    <img
+                      src="./images/word-counter.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-white">Word Counter</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev me-5 pe-5"
+                type="button"
+                data-bs-target="#carouselExampleIndicators2"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators2"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>\</div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./tools_games.js"></script>
+  </body>
+</html>

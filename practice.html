@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+     <link rel="icon" type="image/x-icon" href="./images/main-logo-bg.png">
+
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body class="d-flex h-100 text-center cbg-themed" cz-shortcut-listen="true">
+    <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <nav
+            class="navbar navbar-expand-lg"
+            aria-label="Offcanvas navbar large"
+          >
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"> </a>
+              <form class="d-flex mt-3 mt-lg-0" role="search">
+                <input
+                  class="form-control me-2 cform"
+                  type="search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-light searchBtn" type="submit">
+                  Search
+                </button>
+              </form>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar2"
+                aria-controls="offcanvasNavbar2"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon navbar-dark"></span>
+              </button>
+              <div
+                class="offcanvas offcanvas-end text-bg-dark"
+                tabindex="-1"
+                id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label"
+              >
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbar2Label">
+                    Menu
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link text-white"
+                        aria-current="page"
+                        href="./index.html"
+                        >Home</a
+                      >
+                    </li>
+                    <li
+                      class="nav-item d-flex justify-content-center align-items-center mx-3"
+                    >
+                      <a
+                        class="nav-link text-white"
+                        aria-current="page"
+                        href="./tools_games.html"
+                        >Tools & Games</a
+                      >
+                    </li>
+                    <li class="nav-item ps-4">
+                      <div class="acc-logo">
+                        <a class="nav-link text-white acc-info" href="#"></a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main class="px-3 my-5">
+        <h1 class="pb-4 text-white">Avaiable books to practice</h1>
+        <div class="container pb-3">
+          <select
+            name="books"
+            id="books"
+            class="form-select-sm cform text-white"
+          >
+            <option value="cb">All books</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Web Technology">Web Technology</option>
+            <option value="Information Science">Information Science</option>
+            <option value="Language">Language</option>
+          </select>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 wt">
+              <div class="container">
+                <div class="card float-left">
+                  <div class="row">
+                    <div class="col-sm-7 ccard">
+                      <div class="card-block text-white">
+                        <span class="text-info book-fs" id="book1">
+                          The Complete Reference HTML & CSS
+                        </span>
+                        <br />
+                        <div class="mt-sm-2">
+                            <span class="cfs">Author : </span>
+                          <span class="cfs author">Thamos A. Powell</span>
+                          <br />
+                          <span class="cfs">Category :</span>
+                          <span class="cfs category"> Web Technology</span>
+                        </div>
+
+                        <br />
+                        <a
+                          href="#"
+                          class="btn btn-primary btn-sm cbtn mt-sm-2 d-md-none"
+                          >Practice</a
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col-sm-5 book-container">
+                      <img
+                        class="d-block w-100 px-2 py-2"
+                        src="./images/html.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 wt">
+              <div class="container">
+                <div class="card float-left">
+                  <div class="row">
+                    <div class="col-sm-7 ccard">
+                      <div class="card-block text-white">
+                        <span class="text-info book-fs" id="book2"
+                          >ES6 & Beyond</span
+                        >
+                        <br />
+                        <div class="mt-sm-2">
+                           <span class="cfs">Author : </span>
+                          <span class="cfs author">Kyle Simpson</span>
+                          <br />
+                          <span class="cfs">Category :</span>
+                          <span class="cfs category"> Web Technology</span>
+                        </div>
+
+                        <br />
+                        <a
+                          href="#"
+                          class="btn btn-primary btn-sm cbtn mt-sm-2 d-md-none"
+                          >Practice</a
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col-sm-5 book-container">
+                      <img
+                        class="d-block w-100 px-2 py-2"
+                        src="./images/js.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 cs">
+              <div class="container">
+                <div class="card float-left">
+                  <div class="row">
+                    <div class="col-sm-7 ccard">
+                      <div class="card-block text-white">
+                        <span class="text-info book-fs" id="book3"
+                          >Principles of Information Systems</span
+                        >
+                        <br />
+                        <div class="mt-sm-2">
+                          <span class="cfs">Author : </span>
+                          <span class="cfs author"
+                            >George W. Reynolds m. Stair</span
+                          >
+                          <br />
+                          <span class="cfs">Category :</span>
+                          <span class="cfs category"> Computer Science</span>
+                        </div>
+
+                        <br />
+                        <a
+                          href="#"
+                          class="btn btn-primary btn-sm cbtn mt-sm-2 d-md-none"
+                          >Practice</a
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col-sm-5 book-container">
+                      <img
+                        class="d-block w-100 px-2 py-2"
+                        src="./images/it.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--another row-->
+          <div class="row">
+            <div class="col-md-4 is">
+              <div class="container">
+                <div class="card float-left">
+                  <div class="row">
+                    <div class="col-sm-7 ccard">
+                      <div class="card-block text-white">
+                        <span class="text-info book-fs" id="book4"
+                          >Data Structures and Algorithms</span
+                        >
+                        <br />
+                        <div class="mt-sm-2">
+                          <span class="cfs">Author : </span>
+                          <span class="cfs author">Jay Wengrow</span>
+                          <br />
+                          <span class="cfs">Category :</span>
+                          <span class="cfs category"> Information Science</span>
+                        </div>
+
+                        <br />
+                        <a
+                          href="#"
+                          class="btn btn-primary btn-sm cbtn mt-sm-2 d-md-none"
+                          >Practice</a
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col-sm-5 book-container">
+                      <img
+                        class="d-block w-100 px-2 py-2"
+                        src="./images/ds.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 cs">
+              <div class="container">
+                <div class="card float-left">
+                  <div class="row">
+                    <div class="col-sm-7 ccard">
+                      <div class="card-block text-white">
+                        <span class="text-info book-fs" id="book5"
+                          >Software Engineering</span
+                        >
+                        <br />
+                        <div class="mt-sm-2">
+                          <span class="cfs">Author : </span>
+                          <span class="cfs author">David Farley</span>
+                          <br />
+                          <span class="cfs">Category :</span>
+                          <span class="cfs category"> Computer Science</span>
+                        </div>
+
+                        <br />
+                        <a
+                          href="#"
+                          class="btn btn-primary btn-sm cbtn mt-sm-2 d-md-none"
+                          >Practice</a
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col-sm-5 book-container">
+                      <img
+                        class="d-block w-100 px-2 py-2"
+                        src="./images/se.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 lg">
+              <div class="container">
+                <div class="card float-left">
+                  <div class="row">
+                    <div class="col-sm-7 ccard">
+                      <div class="card-block text-white">
+                        <span class="text-info book-fs" id="book6"
+                          >Traveller B2</span
+                        >
+                        <br />
+                        <div class="mt-sm-2">
+                          <span class="cfs">Author : </span>
+                          <span class="cfs author">H.Q. Mitchell</span>
+                          <br />
+                          <span class="cfs">Category :</span>
+                          <span class="cfs category"> Language</span>
+                        </div>
+
+                        <br />
+                        <a
+                          href="#"
+                          class="btn btn-primary btn-sm cbtn mt-sm-2 d-md-none"
+                          >Practice</a
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col-sm-5 book-container">
+                      <img
+                        class="d-block w-100 px-2 py-2"
+                        src="./images/eng.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./practice.js"></script>
+  </body>
+</html>

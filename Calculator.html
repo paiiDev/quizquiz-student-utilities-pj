@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .a {
+            background-color: #FFE6E6;
+            width: 230px;
+            height: 420px;
+            margin-left: 450px;
+            margin-top: 100px;
+            border-radius: 15px;
+            border: #AD88C6 solid 1px;
+            
+        }
+        .text-box{
+            display: flex;
+            justify-content: center;
+            padding-top:50px;
+            height: 40px;
+            padding-top: 55px;
+            
+        }
+        .text-box-deco{
+            width: 170px;
+            height: 50px;
+            border-radius: 7px;
+            border: solid #AD88C6;
+            color: #7469B6;
+            border: #AD88C6 solid 1.5px;
+        }
+        .btn{
+            width: 40px;
+            height: 27px;
+            padding: 3px;
+            border-radius: 7px;
+            background-color: #E1AFD1;
+            border: #AD88C6;
+            
+        }
+        .btn-100px{
+            width: 85px;
+            height: 27px;
+            padding: 3px;
+            border-radius: 7px;
+            background-color: #AD88C6;
+            border: #AD88C6;
+            
+        }
+        .btn-cus{
+            width: 40px;
+            height: 27px;
+            padding: 3px;
+            border-radius: 7px;
+            background-color: #AD88C6;
+            border: #AD88C6;
+        }
+        .btn-container{
+           text-align: center;
+           padding-top: 40px;
+        }
+        .cal-name-container{
+            position: relative;
+        }
+        .cal-name{
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #7469B6 ;
+            position: absolute;
+            left: 29px;
+            top: 15px;
+        }
+        .fses{
+            font-size: 7px;
+        }
+        .edition-container{
+            position: relative;
+        }
+        .edition{
+            position: absolute;
+            font-size: 7px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #7469B6 ;
+            left: 157px;
+            top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <form>
+            <div class="cal-name-container">
+                <div class="cal-name">PAII <br> <span class="fses">FS-991ES PLUS</span></div>
+            </div>
+            <div class="text-box">
+                <input type="textbox" name="t1" placeholder="  0" class="text-box-deco">
+            </div>
+            <br>
+            <div class="btn-container">
+            <input type="button" value="AC" class="btn-cus" onclick="t1.value=' '">
+            <input type="button" value="DE" class="btn-cus" onclick="t1.value=t1.value.slice(0,-1)">
+            <input type="button" value="." class="btn-cus">
+            <input type="button" value="/" class="btn-cus" onclick="t1.value+='/'">
+            <br><br>
+            <input type="button" value="7" class="btn" onclick="t1.value+='7'">
+            <input type="button" value="8" class="btn" onclick="t1.value+='8'">
+            <input type="button" value="9" class="btn" onclick="t1.value+='9'">
+            <input type="button" value="*" class="btn-cus" onclick="t1.value+='*'">
+            <br><br>
+            <input type="button" value="4" class="btn" onclick="t1.value+='4'">
+            <input type="button" value="5" class="btn" onclick="t1.value+='5'">
+            <input type="button" value="6" class="btn" onclick="t1.value+='6'">
+            <input type="button" value="-" class="btn-cus" onclick="t1.value+='-'">
+            <br><br>
+            <input type="button" value="1" class="btn" onclick="t1.value+='1'">
+            <input type="button" value="2" class="btn" onclick="t1.value+='2'">
+            <input type="button" value="3" class="btn" onclick="t1.value+='3'">
+            <input type="button" value="+" class="btn-cus" onclick="t1.value+='+'">
+            <br><br>
+            <input type="button" value="00" class="btn" onclick="t1.value+='00'">
+            <input type="button" value="0" class="btn" onclick="t1.value+='0'">
+            <input type="button" value="=" class="btn-100px" onclick="t1.value=eval(t1.value)">
+            <div class="edition-container">
+                <div class="edition">
+                    PAII's Edition
+                </div>
+            </div>
+            <br><br>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

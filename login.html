@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .site-name {
+        font-size: 25px;
+        font-weight: bold;
+        color: #14125d;
+      }
+      body {
+       background: rgb(0,1,120);
+background: linear-gradient(90deg, rgba(0,1,120,1) 0%, rgba(21,23,199,1) 50%, rgba(0,1,120,1) 100%);
+      }
+      .cfs {
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body
+    class="d-flex align-items-center py-4 bg-body-tertiary"
+    cz-shortcut-listen="true"
+  >
+    <div class="container py-5">
+      <main class="form-signin col-md-6 col-lg-4 m-auto">
+        <form>
+          <div class="site-name p-5 text-center cfs">QuizQuiz</div>
+          <span class=" login-info text-danger m-5"></span>
+          <div class="form-floating mt-2">
+            
+            <input
+              type="email"
+              class="form-control userEmail"
+              id="floatingInput"
+              placeholder="name@example.com"
+            />
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mt-2">
+            <input
+              type="password"
+              class="form-control userPassword"
+              id="floatingPassword"
+              placeholder="Password"
+            />
+            <label for="floatingPassword">Password</label>
+          </div>
+
+          <div class="form-check text-start my-2 p-0">
+      
+            <label class="text-start text-white" for="flexCheckDefault">
+              You don't have an account?
+            </label>
+            <a href="./sign-up.html">Create one here</a>
+          </div>
+          <button class="btn btn-primary w-100 py-2 mt-4 loginBtn" type="submit">
+            Login
+          </button>
+          <p class="mt-5 mb-3 text-white">© Pyae Paing Kyaw 2CS-26</p>
+        </form>
+      </main>
+    </div>
+
+    <script src="./login.js"></script>
+  </body>
+</html>

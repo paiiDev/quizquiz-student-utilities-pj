@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Game-1</title>
+    <style>
+        .container {
+            width: 250px;
+            height: 200px;
+            border: 3px grey solid;
+            background-color: grey;
+            color: white;
+            border-radius: 5px;
+            margin: auto;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        #score {
+            padding: 10px;
+        }
+
+        .start {
+            text-align: center;
+            width: 250px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .btn {
+            width: 250px;
+            height: 35px;
+            margin: 3px;
+        }
+
+        .sub {
+            width: 100px;
+            height: 25px;
+        }
+
+        #qs {
+            display: none;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #t1 {
+            height: 25px;
+        }
+
+        #time {
+            display: none;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Maths Game🕹️</h1>
+    <form name="f">
+        <div class="container just">
+            <div id="score">Score: </div>
+            <div id="qs">
+                <span>What is </span><span id="n1">_</span><span> multiply by </span><span id="n2">_</span> ?
+            </div>
+
+
+
+            <br>
+            <input type="text" name="t1" id="t1"><br><br>
+            <input type="button" value="Submit" class="sub" onclick="check()">
+            <div id="time"></div>
+        </div>
+        <div class="start">
+
+            <input type="button" value="Start Game" class="btn" onclick="startGame()">
+            <input type="button" value="Stop Game" class="btn" onclick="stopGame()">
+
+
+        </div>
+    </form>
+
+    <script>
+
+        var num1, num2, score = 0;
+        var sec, timer;
+
+        function generateQuestion() {
+
+            num1 = Math.floor(Math.random() * 10);
+            num2 = Math.floor(Math.random() * 10);
+
+            document.getElementById("n1").innerHTML = num1;
+            document.getElementById("n2").innerHTML = num2;
+            document.getElementById("t1").value = "";
+            counter();
+
+        }
+
+        function counter() {
+            clearInterval(timer);
+
+            sec = 10;
+
+            timer = setInterval(function () {
+
+                document.getElementById("time").innerHTML = "⏰: " + sec;
+                sec--;
+                if (sec == 0) {
+                    clearInterval(timer);
+                    generateQuestion();
+                }
+            }, 1000);
+        }
+
+        function check() {
+            var ans = num1 * num2;
+            var input = document.getElementById("t1").value;
+            if (input == "") {
+                alert("Invalid input.")
+            }
+            else if (input == ans) {
+                alert("Your answer is correct!");
+                score++;
+                document.getElementById("score").innerHTML = "Score: " + score;
+                generateQuestion();
+            }
+            else {
+                alert("Wrong! try again...");
+                score--;
+                document.getElementById("score").innerHTML = "Score: " + score;
+            }
+
+
+        }
+
+
+
+        function startGame() {
+            document.getElementById("qs").style.display = "block";
+            document.getElementById("time").style.display = "block";
+            generateQuestion();
+        }
+
+        function stopGame() {
+            clearInterval(timer);
+            alert("Your final score is " + score);
+        }
+    </script>
+</body>
+
+</html>
